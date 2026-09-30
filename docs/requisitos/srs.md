@@ -261,10 +261,22 @@ sin una fuente confirmada.
 
 ## 9. Glosario
 
-Este apartado contiene las definiciones vigentes de los términos del dominio
-que pueden interpretarse de más de una manera. Cada entrada indicará su fuente
-para conservar la procedencia de la definición. El catálogo de requisitos podrá
-enlazar a los términos de esta sección, pero no los definirá de nuevo.
+Este apartado contiene las definiciones vigentes de los términos del dominio que pueden interpretarse de más de una manera. Cada entrada indicará su fuente para conservar la procedencia de la definición. El catálogo de requisitos podrá enlazar a los términos de esta sección, pero no los definirá de nuevo.
+
+| Término | Definición en Proyecto Simbiosis | Fuente |
+| --- | --- | --- |
+| **Acreditación profesional** | Proceso mediante el cual una persona con perfil de nutricionista o médico aporta documentación en línea para demostrar su condición profesional y obtener el distintivo correspondiente en la plataforma. | Acta de captura, §1.3 |
+| **Coordinador** | Rol único responsable de la administración, moderación del foro, revisión de reportes de contenido inapropiado y aprobación de las cuentas de cuidadores y nutricionistas. | Acta de acuerdos, §2.3.2, §2.4.1; Acta de captura, §4 |
+| **Cuidador** | Persona registrada en la plataforma encargada de acompañar o asistir a uno o varios pacientes, previa autorización explícita de estos. | Acta de captura, §2 |
+| **Cuenta inactiva** | Estado en el que entra la cuenta de un cuidador tras permanecer tres meses seguidos sin estar asociada a ningún paciente. | Acta de acuerdos, §2.2.4; Acta de captura, §2 |
+| **Enfermedad Inflamatoria Intestinal (EII)** | Conjunto de patologías digestivas crónicas (como la enfermedad de Crohn o la colitis ulcerosa) en las que se enmarca la temática y el propósito del proyecto. | SRS, §1.1; Acta de captura, tít. |
+| **Información de salud** | Datos de carácter personal y privado aportados de forma opcional por el paciente referentes a sus patologías, alergias o restricciones alimentarias. | Acta de captura, §1.1, §2, §7.1 |
+| **Nutricionista** | Rol común dentro de la plataforma que engloba tanto a nutricionistas como a médicos acreditados, con permisos para publicar recetas validadas, artículos de salud y validar propuestas de usuarios. | Acta de captura, §1.3; SRS, §2.2 |
+| **Paciente** | Persona usuaria de la plataforma que padece EII y para quien se adaptan las búsquedas de recetas y la información de salud. | Acta de captura, §1.2, §2 |
+| **Publicación de salud** | Artículo breve elaborado y publicado por un nutricionista sobre alimentación y hábitos de vida saludables enfocados a personas con EII. | Acta de captura, §5 |
+| **Receta adaptada** | Resultado del filtrado y búsqueda de recetas según el perfil, alergias y restricciones alimentarias declaradas por un paciente, sin que el sistema realice modificaciones automáticas de ingredientes o cantidades. | Acta de captura, §3 |
+| **Receta propuesta** | Receta creada y enviada por un paciente o cuidador que requiere la revisión y validación de un nutricionista antes de publicarse como validada. | Acta de captura, §3 |
+| **Receta validada** | Receta cuya idoneidad nutricional ha sido revisada y aprobada por un nutricionista acreditado, o publicada directamente por este. | Acta de acuerdos, §2.4.1; Acta de captura, §3 |
 
 | Término | Definición en Proyecto Simbiosis | Fuente |
 | --- | --- | --- |
