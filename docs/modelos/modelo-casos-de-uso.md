@@ -233,7 +233,8 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 **Inicio:** El usuario quiere actualizar su propio perfil
 
-**Escenario principal de éxito:** 1. El usuario registrado solicita actualizar su perfil.
+**Escenario principal de éxito:** 
+1. El usuario registrado solicita actualizar su perfil.
 2.El sistema presenta los datos actuales y distingue los valores editables de los que permanecen fijos.
 3. El usuario modifica los valores permitidos
 4. El usuario solicita guardar los cambios
@@ -274,21 +275,54 @@ No queda una actualización parcial.
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-21 · Buscar recetas
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Buscar recetas mediante los criterios seleccionados, consultar los resultados y acceder al detalle de una receta.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado, como actor principal
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** El usuario dispone de una cuenta activa. 
+Tener la sesión iniciada
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** EL usuario (registrado y con sesión iniciada) desea buscar una receta o consultar el detalle de una.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+1. El usuario solicita buscar recetas.
+2. El sistema permite indicar los criterios de búsqueda
+3. El usuario selecciona un ingrediente que desea encontrar
+4. El usuario solicita ejecutar la búsqueda
+5. El sistema valida los criterios introducidos.
+6. El sistema busca las recetas publicadas y validadas que cumplan todos los criterios, conforme el acta.
+7. El sistema muestra la vista previa de resultados en el orden establecido en el acta.
+8. La persona selecciona una receta de la lista.
+9. El sistema muestra el detalle completo de la receta.
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+**Extensiones (flujos alternativos):** 
+1a. La persona no introduce ningún criterio:
+
+1a1. El sistema detecta que no hay ningún criterio y solicita introducir al menos uno.
+
+1a2. El sistema conserva la interfaz sin ejecutar la búsqueda. El flujo vuelve al paso 1.
+
+1b. Conflicto de ingredientes (mismo ingrediente incluido y excluido a la vez):
+
+1b1. El sistema señala el conflicto.
+1b2. El sistema no ejecuta la búsqueda hasta que la persona corrija la selección. El flujo vuelve al paso 1.
+
+6a. Búsqueda sin resultados (ninguna receta cumple los criterios):
+5a1. El sistema informa que no hay resultados y conserva los criterios introducidos.
+5a2. Si el texto permite corrección ortográfica, el sistema propone la corrección. Si no, propone alternativas relacionadas (si dispone de ellas) o indica que no hay sugerencias. Las sugerencias se muestran claramente separadas de los resultados y mantienen siempre los ingredientes excluidos.
+5a3. La persona decide si acepta una sugerencia/corrección o modifica los criterios manualmente.
+5a4. Si la persona acepta una propuesta, ve los nuevos criterios propuestos y confirma si desea ejecutar la nueva búsqueda.
+
+*a. Fallo del sistema / Error de consulta (en búsqueda o al cargar detalle):
+*a1. El sistema informa del problema/error de carga (sin presentar el fallo como una búsqueda sin resultados).
+*a2. El sistema conserva los criterios de la última búsqueda.
+*a3. La persona puede reintentar la consulta o dar por terminada la interacción.
+
+**Postcondiciones:** Con éxito: el usuario aha consultado los resultados de una búsqueda y el detalle de una receta seleccionada
+
 
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
 
