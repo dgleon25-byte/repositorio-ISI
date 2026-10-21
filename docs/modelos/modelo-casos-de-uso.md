@@ -223,25 +223,54 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-05 · Actualizar perfil* 
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Modificar los datos personales y las preferencias de la cuenta propia.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado, como actor principal
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** La persona ya tiene una cuenta activa. EL usuario tiene una sesión iniciada. La validez de los nuevos datos se comprueba durante el caso de uso
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario quiere actualizar su propio perfil
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 1. El usuario registrado solicita actualizar su perfil.
+2.El sistema presenta los datos actuales y distingue los valores editables de los que permanecen fijos.
+3. El usuario modifica los valores permitidos
+4. El usuario solicita guardar los cambios
+5. El sistema comprueba los datos según las reglas del acta
+6. El sistema guarda conjuntamente los cambios en el perfil
+7. El sistema confirma la actualización
+8. El caso de uso finaliza
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** 5.a. Falta un dato obligatorio o un dato no cumple su formato:
+solucion:
+1. EL sistema identifica los campos afectados y explica la corrección necesaria
+2. El sistema conserva los valores introducidos y no guarda ningún cambio.
+3. El usuario corrige los datos.
+4. El flujo vuelve al paso 4.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+*.a. El usuario cancela antes de guardar:
+solucion:
+1. El sistema descarta los cambios de la edición.
+2. El perfil conserva los valores guardados anteriormente.
+3. El caso de uso termina sin actualizar el perfil.
+
+6.a. El sistema no puede guardar:
+solución:
+1. El sistema informa de que la actualización no se ha completado.
+2. Los datos guardados permanecen sin cambios. Se conservan los valores introducidos.
+3. El usuario solicita reintentar el guardado.
+4. El flujo vuelve al paso 4.
+Si el usuario decide cancelar, se aplica la alternativa de cancelación.
+      
+**Postcondiciones:** Con éxito: el perfil contiene los cambios guardados y el usuario recibe la confirmación.
+El alias y el correo electrónico mantienen sus valores.
+Sin éxito o con cancelación: el perfil conserva los valores anteriores.
+No queda una actualización parcial.
 
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
 
-**Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+**Preguntas abiertas:** No especifica como se confirma que el usuario actualizó su perfil
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
