@@ -3,8 +3,8 @@
 | Campo | Valor |
 | --- | --- |
 | Proyecto | Proyecto Simbiosis |
-| Fecha | [dd/mm/aaaa] |
-| Versión | [Versión de trabajo] |
+| Fecha | [27/10/2026] |
+| Versión | 0.1 |
 | Estado | Borrador |
 
 ## Fuentes comunes
@@ -15,49 +15,49 @@
 
 ## Épica de búsqueda
 
-Como [rol], quiero [capacidad amplia], para [beneficio].
+Como usuario, quiero buscar recetas mediante texto, para encontrar opciones adaptadas a mi situación alimentaria
 
 **Estado:** descompuesta en US-01, US-02 y US-03. Conserva la necesidad conjunta.
 
 ## Justificación de la división
 
-[Justificación de los resultados útiles que separa la división.]
+Cada historia abarca un criterio de búsqueda independiente que aporta un valor al usuario al filtrar el catálogo. Esto permite implementar la búsqueda sin depender de demás filtros.
 
 ## US-01
 
-**Título:** [Capacidad]
+**Título:** Búsqueda de recetas por texto
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario registrado, quiero buscar recetas introduciendo algún dato específico sobre esta, para encontrar recetas que coincidan con mi búsqueda.
 
-**Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
+**Fuentes:** UR-08; UC-21; FR85; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que existen las recetas "Ensalada de Zanahorias" y "Tarta de la abuela", cuando el usuario busca "abuela", entonces el sistema muestra "Tarta de la abuela" en los resultados solamente.
+- **CA-02.** Dado que el catálogo no contiene ninguna receta con el término introducido por el usuario, entonces el sistema informa que no se han encontrado resultados.
+- **CA-03.** Dado que existen las recetas "Jugo de naranja" y "Tarta de naranja", cuando el usuario busca "naranja", entonces el sistema muestra ambas recetas en los resultados.
 
 ## US-02
 
-**Título:** [Capacidad]
+**Título:** Búsqueda de recetas por ingredientes incluidos
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como usuario registrado, quiero buscar recetas seleccionando ingredientes, para encontrar recetas que pueda preparar con los ingredientes que tengo
 
-**Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
+**Fuentes:** UR-08; UC-21; [FR 86]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que existen las recetas "Tortilla de patacas" (ingredientes: huevo, patacas), y "Huevo frito" (ingredientes: huevo), cuando el usuario seleccione "huevo" y "patata" como ingredientes, entonces el sistema solo muestra la "Tortilla de paracas" 
 - **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
 - **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
 
 ## US-03
 
-**Título:** [Capacidad]
+Como usuario registrado quiero excluir ingredientes de una búsqueda, para evitar recetas que contengan ingredientes que no quiero utilizar.
 
 Como [rol], quiero [capacidad], para [beneficio].
 
-**Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
+**Fuentes:** UR-08; UC-21; [FR ]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
